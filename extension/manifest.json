@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Tab",
+  "version": "0.1.0",
+  "description": "Restyle any website visually.",
+  "permissions": ["storage"],
+  "background": { "service_worker": "background.js" },
+  "action": { "default_title": "Edit this page" },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ]
+}
